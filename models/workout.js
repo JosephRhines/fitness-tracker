@@ -7,20 +7,20 @@ const fitnessSchema = new Schema({
         day: {
             type: Date,
             default: Date.now,
-            required: "Date is Required"
+            
         },
         exercises: 
-          {
-            type: String,
-            name: String,
+         [{
+            type: {type: String},
+            name: {type: String,trim:true,required:true},
             duration: Number,
             weight: Number,
             reps: Number,
             sets: Number,
             distance: Number,
-            trim: true,
-            required: "Exercise is required"
-        }
+          
+          
+        }]
 
         
       
